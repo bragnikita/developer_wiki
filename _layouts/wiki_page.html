@@ -1,0 +1,29 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+  <link rel="stylesheet" href="/assets/wiki.css"/>
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="content-wrapper">
+    <h1>{{ page.title }}</h1>
+    <div class="backlink"><a href="/wiki/index.html">To index</a></div>
+    <div class="wiki-page">
+      {{ content }}
+    </div>
+    <div class="backlink"><a href="/wiki/index.html">To index</a></div>
+  </div>
+</body>
+</html>
