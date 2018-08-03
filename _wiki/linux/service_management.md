@@ -23,3 +23,4 @@ keywords: linux, services, admin
 
 # Linux
 * <https://habr.com/company/infobox/blog/241237/>
+* [systemd для администраторов](http://www2.kangran.su/~nnz/pub/s4a/s4a_latest.pdf)

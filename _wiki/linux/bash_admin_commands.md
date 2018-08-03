@@ -4,13 +4,13 @@ category: linux
 tags: bash
 ---
 
-## Disk usage/folder size
+# Disk usage/folder size
 ```bash
 du -sh <location>
 ```
 
 
-## Search
+# Search
 
 ### Find
 
@@ -56,7 +56,7 @@ find . -name '*.log' -exec grep -e 'fatal|error' {}
 ### grep
 * `grep -E 'fatal|error|critical|' *.log ` - search in file content with regex
 
-## Archive
+# Archive
 
 ### tar
 * `tar -cvf arch.tar *.log a.conf b.txt`
@@ -65,7 +65,7 @@ find . -name '*.log' -exec grep -e 'fatal|error' {}
 ### zip
 * gunzip file.gz
 
-## Utils
+# Utils
 
 ### xargs
 ```
@@ -83,3 +83,16 @@ out: 3 4
 * formatting: `date +'%Y %m %d %H %M %S'`
 * set separate fields: `date -v1m -v2h`
 * set fields to relative values: `date -v+5m` (after 5 mins)
+
+# Network
+## Netcat (`nc`)
+Checking whether some service is listening the specified port  
+`nc -vz <host> <port> 2>/dev/null` returns 0 if a service is available
+
+Example: waiting for some service
+```sh
+until nc -vz elasticsearch 9200 2>/dev/null; do
+  echo "Elasticsearch is not ready, sleeping."
+  sleep 1
+done
+```
