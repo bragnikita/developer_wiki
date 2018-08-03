@@ -2,6 +2,11 @@
 category: rails
 ---
 # Controller
+[Official documentation](https://guides.rubyonrails.org/action_controller_overview.html)  
+Implementing controller tests with JWT auth  
+<http://aalvarez.me/blog/posts/testing-a-rails-api-with-rspec.html>  
+`render` API examples  
+<https://apidock.com/rails/ActionController/Base/render>
 
 ## Strong Parameters
 <http://api.rubyonrails.org/classes/ActionController/Parameters.html>
@@ -15,6 +20,7 @@ category: rails
 * `slice/slice!(keys...)` returns new parameters instance, than inclues only given keys (or empty)
 * `except/except!(keys...)` creates new parameters without given keys
 * `dig(keys chain...)` returns nested parameter or nil if intermediate step is nil
+* `key?/has_key?/include? key`
 
 `ActionController::Parameters.action_on_unpermitted_parameters = :raise`
 * `false` - just filter out (default for prod)

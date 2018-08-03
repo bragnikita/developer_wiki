@@ -3,10 +3,11 @@ category: rspec
 ---
 
 # RSpec
-[Basics](https://relishapp.com/rspec/rspec-core/docs)
-
 ## Links
-[Best practices](http://www.betterspecs.org/)
+[Basics](https://relishapp.com/rspec/rspec-core/docs)  
+[Cheatsheet](https://www.rubypigeon.com/posts/rspec-core-cheat-sheet/)  
+[Best practices](http://www.betterspecs.org/)  
+[Expectations](https://www.rubypigeon.com/posts/rspec-expectations-cheat-sheet/)  
 
 ## Install it
 
@@ -19,9 +20,10 @@ rails g rspec:install
 -o - output to file
 -d - debug
 -e <regex> - run example
+--fail-fast - stop running after the first failure
 -P (--pattern) - паттерн тестовых файлов (`spec/**/*_spec.rb`) по умолчанию
 ```
-rspec --format d --pattern spec/**/user_spec.rb
+rspec --format d --fail-fast --pattern spec/**/user_spec.rb
 ```
 
 ## Matchers
@@ -61,6 +63,10 @@ expect(collection).to have_exactly(n).items
 expect(collection).to have_at_most(n).items
 expect(collection).to have_at_least(n).items
 ```
+
+## Shared examples
+<https://www.rubydoc.info/gems/rspec-core/frames#Shared_Examples_and_Contexts>
+
 
 ## Хелперы
 
@@ -102,7 +108,7 @@ end
 ```
 
 ## And и Or
-https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/compound-expectations
+<https://relishapp.com/rspec/rspec-expectations/v/3-7/docs/compound-expectations>
 ```ruby
 it "passes when both are true" do
   expect(string).to start_with("foo").and end_with("bazz")
@@ -120,7 +126,7 @@ end
 ```
 
 ## Mocks
-http://www.rubydoc.info/gems/rspec-mocks/frames
+<http://www.rubydoc.info/gems/rspec-mocks/frames>
 
 обычно размещают в before-хуке (before(:example)).
 

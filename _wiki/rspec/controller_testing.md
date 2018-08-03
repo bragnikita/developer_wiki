@@ -27,6 +27,7 @@ end
 
 * `response.parsed_body` возвращает JSON-ответ
 * `eq` выполняет точное сравнение `expect(response.parsed_body).to eq(expected)`
+* `match` мягче eq (можно указывать не точные значения атрибутов, а matcher-ры), но всё равно требует наличия всех ключей атрибутов
 * `include/a_hash_including` проверяет наличие под-мапы или нескольких под-мап внутри другой мапы
 ```ruby
 expected = {
@@ -73,8 +74,13 @@ expect(response.parsed_body).to include(expected)
 * anything - любое значение (проверяет наличие ключа)
 * a_string_matching - лишь часть строки (через регексп или подстроку)
 * kind_of - проверка типа
+* a_string_matching - часть строки или регулярка
 
 # Test API
+
+## Методы запросов
+`actionpack-5.1.5/lib/action_controller/test_case.rb`  
+
 
 http://api.rubyonrails.org/v5.2.0/classes/ActionDispatch/Integration/Session.html#method-i-process
 
