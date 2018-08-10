@@ -19,3 +19,15 @@ RSpec.describe "context name" do
 end
 
 ```
+
+## Аутентификация: JWT
+```ruby
+require 'jwt'
+# ...
+before do
+   token = JWT.encode({user: User.first.id},
+      ENV["AUTH_SECRET"], "HS256")
+    header "Authorization", "Bearer #{token}"
+    get "/hobbies/-1"
+end
+```

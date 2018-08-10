@@ -67,6 +67,22 @@ expect(collection).to have_at_least(n).items
 ## Shared examples
 <https://www.rubydoc.info/gems/rspec-core/frames#Shared_Examples_and_Contexts>
 
+```ruby
+RSpec.shared_examples 'respond to missing' do |url|
+  before do ... end
+  it "responds..." ... end
+end
+```
+where `url` - parameter, passing from calling code
+
+Using:  
+1) Include shared example to the rspec script  
+2)
+```ruby
+describe '...' do
+  it_behaves_like "respond to missing", '/api/cats'
+end
+```
 
 ## Хелперы
 

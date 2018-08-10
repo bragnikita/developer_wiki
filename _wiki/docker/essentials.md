@@ -32,6 +32,25 @@ Stopping: `docker container stop <container id>`
 Remove specified container: `docker container rm <hash>`  
 Remove specified image: `docker image rm <image id>`
 
+### Differences between ENTRYPOINT and CMD
+Any command linke arguments passed to `docker run <image>` will be executed after the entrypoint and will override all elements, specified using *CMD*.  
+`ENTRYPOINT` sets the command and parameters that will be executed first when a container is run. All parameters, passed to `docker run <image>` will be attached after parameters of those specified with `ENTRYPOINT`. In that case default parameters, than were set by `CMD` directive, are ignored.  
+```
+ENTRYPOINT ["executable", "param1", "param2"]
+ENTRYPOINT [ "sh", "-c", "echo $HOME" ]
+
+COPY ./docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["postgres"]
+```
+`CMD/command` provide defaults when executing a container. If you ran `docker run <image>`, then the commands and parameters, specified by `CMD/command` would be executed.  
+If an `ENTRYPOINT` is set, then commands, specified by a `CMD`, executes after those specified by `ENTRYPOINT`.  
+If you omit the executable in a `CMD` instruction, then you must specify an `ENTRYPOINT`.
+```
+CMD ["executable","param1","param2"]
+CMD ["param1","param2"]
+```
+
 #Docker Compose
 ## Basic defenitions
 Compose is a tool for defining an running multi-container Docker apps. We can start or stop all necessary containers with only one `docker-compose up` command.  
