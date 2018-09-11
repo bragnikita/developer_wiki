@@ -78,6 +78,12 @@ out: 3 4
 * `-0` use `\0` as delimeter
 * `-E` set eofstr as delimeter (default are space,tag,newline and eoffile)
 
+### kill
+Kill all processes with name <process name> 
+```
+ps ax | grep <process name> | grep -v grep | awk '{print $1}' | xargs kill
+```
+
 ### date
 `date` displays current date as `Tue May 29 15:18:07 JST 2018` (format `%a %b %d %T %Z %Y` )
 * formatting: `date +'%Y %m %d %H %M %S'`
