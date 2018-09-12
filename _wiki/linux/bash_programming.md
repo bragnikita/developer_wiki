@@ -195,6 +195,41 @@ restart()
 }
 ```
 
+### Arrays
+<http://www.opennet.ru/docs/RUS/bash_scripting_guide/c12790.html>  
+```sh
+declare -a ARR=()
+#or
+ARR=( [0]="elem1" [2]="elem2" )
+ARR=( elem1 elem2 )
+#or
+ARR[0]="smth"
+
+#get element
+echo ${ARR[2]};
+#length
+echo ${#ARR[*]}
+
+#iteration
+for i in "${colors[@]}"
+do
+  echo "$i"
+done
+
+#manipulating
+# push
+array0=( "${array0[@]}" "новый1" )
+# delete
+unset array0[2]
+# subarray
+declare -a array3=( ${array0[@]:1:2} )
+
+# загрузка из файла (по одному слову в строке)
+declare -a array1
+array1=( `cat "$filename" | tr '\n' ' '`)
+echo ${array1[@]}
+```
+
 ### jobs
 * `wait` - ждет, пока завершит работу запущенные ранее фоновые процессы
 * `wait <PID/job code>` - ждет, пока завершит работу указанный процесс/джоб
