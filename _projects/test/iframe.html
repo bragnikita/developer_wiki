@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="" rel="stylesheet">
+    <style>
+
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-scrollbar:vertical {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar:horizontal {
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .25);
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+        }
+
+        ::-webkit-scrollbar-thumb:vertical {
+            min-height: 44px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .wrapper {
+            position: relative;
+        }
+
+        .target {
+            line-height: 3;
+            height: 500px;
+            overflow-y: scroll;
+            padding-right: 24px;
+            right: -24px;
+            position: absolute;
+            top: 0;
+        }
+        .target:hover {
+          rigth: 0;
+          padding-right: 0;
+        }
+
+        .target:hover::-webkit-scrollbar {
+            display: block;
+        }
+
+        .target::-webkit-scrollbar {
+            display: none;
+        }
+
+        .content {
+        }
+
+        html {
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+        }
+    </style>
+</head>
+<body class="body">
+<div class="wrapper">
+    <div class="target">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius nemo quasi quibusdam sed tempore
+            tenetur
+            veniam! Dolorum, labore, tenetur. Dolore ipsum minus modi quasi sint tempora veniam vero voluptatibus.<br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquid amet beatae commodi deleniti
+            distinctio est
+            ex fugit impedit itaque officia, praesentium ratione, repudiandae sint veniam voluptas voluptate. Accusamus,
+            nesciunt.<br />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum delectus doloremque harum, iste iusto,
+            laborum
+            minima nam natus nihil nisi, numquam odit quia quisquam quod sit suscipit tempora voluptatum!</br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, asperiores cupiditate delectus
+            dignissimos
+            distinctio dolore eius eveniet impedit magnam minima molestiae optio praesentium qui quisquam quod repellat
+            sed
+            tenetur ut!<br />
+        </div>
+    </div>
+</div>
+</body>
+</html>
