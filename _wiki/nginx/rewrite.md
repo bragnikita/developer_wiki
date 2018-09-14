@@ -1,6 +1,20 @@
 ---
 category: nginx
 ---
+# Location
+Порядок матчинга  
+<https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms>
+* prefix-based location matches
+  - exact match ( = )
+  - поиск наиболее длинного совпадения
+    - если наиболее длинное совпадение имеет оператор ^~, выбираем его
+    - если оператор иной, совпадение запоминается на будущее
+* regular expression location matches
+  - если регулярка выводится внутри наиболее длинного префиксного совпадения
+    - эта регулярка помещается наверх списка проверок
+  - проверяются регулярки сверху вниз по скиску. Первое совпадение выбирается.
+  - если не найдено ни одного, то используется наиболее длинное префиксное совпадение
+
 # Rewrite
 http://nginx.org/ru/docs/http/ngx_http_rewrite_module.html
 
