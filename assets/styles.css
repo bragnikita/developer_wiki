@@ -72,6 +72,9 @@ li > ol {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
+h2 {
+  border-bottom: 1px solid gray;
+}
 /**
  * Links
  */
@@ -174,7 +177,7 @@ table {
   table tr:nth-child(even) {
     background-color: #f7f7f7; }
   table th, table td {
-    padding: 10px 15px; }
+    padding: 5px 10px; }
   table th {
     background-color: #f0f0f0;
     border: 1px solid #dedede;
