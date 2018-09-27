@@ -2,6 +2,14 @@
 categories: linux
 keywords: bash, strings, regex
 ---
+# Regexp
+
+<http://wiki.bash-hackers.org/syntax/pattern>
+
+```sh
+if [[ $STR =~ .*.txt ]]; then cmd; fi;
+```
+
 # Разбор строковых переменных
 Англ: 'Manipulating and/or expanding variables'
 * `${var:pos}` - подстрока начиная с позиции __pos__
