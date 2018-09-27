@@ -11,6 +11,7 @@ categories-display:
   - jekyll
   - linux
   - react
+  - python
 ---
 
 ## Categories
