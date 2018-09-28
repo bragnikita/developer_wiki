@@ -2,8 +2,9 @@
 title: Lang cheatsheet
 category: python
 ---
-[Tutorial](https://docs.python.org/3/tutorial/index.html)
-[Library ref](https://docs.python.org/3/library/index.html)
+[Tutorial](https://docs.python.org/3/tutorial/index.html)  
+[Documentation](https://docs.python.org/3.7/index.html)  
+[Library ref](https://docs.python.org/3/library/index.html)  
 ## import
 ```python
 import math as m
@@ -18,10 +19,29 @@ from sys import * #импортирует все атрибуты, не начи
 version
 version_info
 ```
+### modules search
+* built-in
+* list of directories in `sys.path` __can modify in runtime__
+  - input script path of cmd
+  - PYTHONPATH environment var
+  - installation-dependent default
+
+Подгрузка модулей происходит из глобальных либ питона, текущей директории и из указанных в sys.path (можно модифицировать в рантайме)  
+### Packages
+Это папки, в которых находятся файлы-модули. В каждой папке пакета должен лежать файл `__init__.py`, хоть пустой. Пакеты могут быть вложенными.  
+Чтобы можно было импортить * из пакета, импортируемые так модули должны быть явно объявлены в `__init__.py`:
+```
+__all__ = ["echo", "surround", "reverse"] # имена модулей
+```
+Относительный импорт (__не работает в main-модуле__)  
+```
+from . import echo
+from .. import formats
+from ..filters import equalizer
+```
+
 ### проверка, что модуль скрипт запущен в качестве основной программы
 `if __name__ == "__main__": ...`
-
-Подгрузка модулей происходит из глобальных либ питона, текущей директории и из указанных в sys.path (можно модифицировать в рантайме)
 
 ## exceptions
 BaseException - база  
@@ -94,7 +114,7 @@ list.extend(other_list)
 list.insert(i,x)
 list.remove(x) # throw ValueError on abscence
 list.index(x,[start[,end]]) # returns position of first x
-list.count(x) 
+list.count(x)
 list.sort(key=None) # property of lambda, that returns sorting key
 list.copy() # shallow copy
 list.clear()
@@ -157,7 +177,7 @@ f(*params) # passes array values as positional arguments
 ```python
 [4,2,7].sort(key=lambda val: val % 2)
 ```
-### Documentation and annotation 
+### Documentation and annotation
 ```python
 def f():
     """Documentation
@@ -165,5 +185,5 @@ def f():
     """
     pass
 print(f.__doc__)
-pring(f.__annotations__)
+print(f.__annotations__)
 ```
