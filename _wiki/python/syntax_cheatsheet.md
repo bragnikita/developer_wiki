@@ -43,6 +43,25 @@ from ..filters import equalizer
 ### проверка, что модуль скрипт запущен в качестве основной программы
 `if __name__ == "__main__": ...`
 
+## strings
+
+[String methods](https://docs.python.org/3.7/library/stdtypes.html#text-sequence-type-str)
+
+* `f'Results of the {year} {event}` - interpolaton
+* `{yes_votes:-9} YES votes {percentage:2.2%}` - interpolation with formatting
+* `'{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)` - format string
+* `'{yes} YES votes {pc}%'.format(yes='ok', pc='100')` - format string
+  - {yes.weight} - get attribute
+  - {var:>30} - right aligned (inside 30 symbols length column)
+  - {var:d}, {var:x}, {var:bin} - dec, hex, bin; {var:#x} - with 0x prefix
+  - {var:.2%} - 80.12%
+  - {var:,} - 102,321,000
+  - {date:%Y-%m-%d %H:%M:%S} -  datetime format
+
+* str(object) - human-readable representation of any object
+* repr(object) - interpreter-readable representation
+
+
 ## exceptions
 BaseException - база  
 Exception - база для юзерских исключений
