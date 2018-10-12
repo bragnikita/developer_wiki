@@ -1,5 +1,4 @@
----
-title: Lang cheatsheet
+
 category: python
 ---
 [Tutorial](https://docs.python.org/3/tutorial/index.html)  
@@ -75,9 +74,10 @@ Exception - база для юзерских исключений
 ```python
 try:
   #code
-  raise RuntimeError
+  raise RuntimeError('text')
 except FileNotFoundError:
-  #handle
+  import traceback
+  print(traceback.format_exc())
 else:
   #if no exceptions have been raised
 finally:
