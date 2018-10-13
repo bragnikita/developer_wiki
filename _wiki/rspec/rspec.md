@@ -16,12 +16,12 @@ category: rspec
 rails g rspec:install
 ```
 ### Launch
--f <format> - format (d - document, p - progress dots, h - html)
--o - output to file
--d - debug
--e <regex> - run example
---fail-fast - stop running after the first failure
--P (--pattern) - паттерн тестовых файлов (`spec/**/*_spec.rb`) по умолчанию
+* -f <format> - format (d - document, p - progress dots, h - html)  
+* -o - output to file  
+* -d - debug  
+* -e <regex> - run example  
+* --fail-fast - stop running after the first failure  
+* -P (--pattern) - паттерн тестовых файлов (`spec/**/*_spec.rb`) по умолчанию  
 ```
 rspec --format d --fail-fast --pattern spec/**/user_spec.rb
 ```
