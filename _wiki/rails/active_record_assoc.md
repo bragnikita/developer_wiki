@@ -1,9 +1,16 @@
 ---
-title: Active Record associations
+title: Active Record
 category: rails
-keywords: active record, associations
+keywords: active record, associations,api
 ---
+# API docs
+[Modules index](https://api.rubyonrails.org/classes/ActiveRecord.html)
+[Query methods](https://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html)  
+[Associations](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html)
+[Persistence](https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html)
 
+
+# Associaltions
 `has_one` указывается на стороне родителя (сущности, у которой _нет внешнего ключа_)  
 `belongs_to` указывается на зависимой стороне (сущности, _в которой определён_ внешний ключ)
 
@@ -48,3 +55,16 @@ has_many: :images, class_name: <target entity>, through: :post_image_links
 * :source_type
 * :through
 * :validate
+
+# Enums
+[API](https://api.rubyonrails.org/classes/ActiveRecord/Enum.html)
+```ruby
+class Conversation < ActiveRecord::Base
+  enum status: { active: 0, archived: 1 }
+end
+conversation.status = "archived"
+conversation.archived!
+conversation.archived? # => true
+conversation.status    # => "archived"
+Conversation.statuses[:active]    # => 0
+```
