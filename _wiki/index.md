@@ -12,6 +12,7 @@ categories-display:
   - linux
   - react
   - python
+  - web
 ---
 
 ## Categories
