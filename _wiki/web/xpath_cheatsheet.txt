@@ -1,6 +1,8 @@
 ---
 title: XPath cheatsheet
-category: web, xml
+categories:
+  - web
+keywords: xpath,xml
 ---
 // XPath CheatSheet
 // To test XPath in your Chrome Debugger: $x('/html/body')
