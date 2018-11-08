@@ -3,6 +3,7 @@ title: XPath cheatsheet
 categories:
   - web
 keywords: xpath,xml
+layout: 'empty'
 ---
 // XPath CheatSheet
 // To test XPath in your Chrome Debugger: $x('/html/body')

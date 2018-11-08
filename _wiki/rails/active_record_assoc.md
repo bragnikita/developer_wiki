@@ -4,10 +4,11 @@ category: rails
 keywords: active record, associations,api
 ---
 # API docs
-[Modules index](https://api.rubyonrails.org/classes/ActiveRecord.html)
+[Modules index](https://api.rubyonrails.org/classes/ActiveRecord.html)  
 [Query methods](https://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html)  
-[Associations](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html)
-[Persistence](https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html)
+[Associations](https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html)  
+[Persistence](https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html)  
+[Migrations](https://api.rubyonrails.org/classes/ActiveRecord/Migration.html)  
 
 
 # Associaltions
