@@ -24,6 +24,8 @@ this.textInput.current.focus();
 
 <https://gist.github.com/bvaughn/923dffb2cd9504ee440791fade8db5f9>
 
+Simulation: <https://reactarmory.com/guides/lifecycle-simulators>
+
 #### Монтирование
 * constructor(props)
 * static getDerivedStateFromProps(props, state) => new state / null
@@ -47,6 +49,7 @@ this.textInput.current.focus();
   - здесь еще доступны ссылки, размеры и позиции скролла, что были до обновления
   - snapshot будет передан в componentDidUpdate
 * componentDidUpdate(prevProps, prevState, snapshot)
+  - здесь можно обновлять стейт и запрашивать данные, отслеживая изменения в свойствах
 
 #### Перехват ошибок
 * componentDidCatch(error, info)
