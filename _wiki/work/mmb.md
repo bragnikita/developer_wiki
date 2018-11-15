@@ -20,4 +20,5 @@
 [Webpacker](https://github.com/rails/webpacker)  
 
 ## Libs
-[CarrierWave](https://github.com/carrierwaveuploader/carrierwave)  
+[CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+[FontAwersome](https://fontawesome.com/v4.7.0/icons/)
