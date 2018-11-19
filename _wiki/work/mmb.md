@@ -18,7 +18,11 @@
 [Lodash](https://lodash.com/docs/)  
 [Webpack Latest](https://webpack.js.org/configuration/dev-server/)  
 [Webpacker](https://github.com/rails/webpacker)  
+[Dropzone](https://react-dropzone.js.org/)  
+
 
 ## Libs
 [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
-[FontAwersome](https://fontawesome.com/v4.7.0/icons/)
+[FontAwersome](https://fontawesome.com/v4.7.0/icons/)  
+https://github.com/slmgc/react-hint  
+https://react-hint.js.org/  
