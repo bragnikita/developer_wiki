@@ -1,12 +1,51 @@
 ---
 categories:
+  - js
   - javascript
   - testing
 keywords: js, testing, jest  
 ---
-#Jest
+# Links
+[Cheatsheet](https://github.com/sapegin/jest-cheat-sheet/blob/master/Readme.md>)  
+[Snapshot testing concept](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca)  
 
+# Running and confuguration
 
+## CLI
+
+interactive mode: `npm run test -- --watch` or `./mode_modules/.bin/jest --watch`  
+coverage: `--coverage`
+
+## Config
+
+#### *in package.json*
+```json
+"jest": {
+  "setupFiles": [
+      "./app/javascript/testSetup.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testMatch": [
+      "**/app/javascript/**/__tests__/**/*.js?(x)",
+      "**/app/javascript/**/?(*.)+(spec|test).js?(x)"
+    ]
+}
+```
+
+### HTML Reporter
+<https://github.com/Hargne/jest-html-reporter#readme>
+
+# Code
 ```javascript
 test('two plus two is four', () => {
   expect(2 + 2).toBe(4);

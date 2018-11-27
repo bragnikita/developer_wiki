@@ -1,5 +1,6 @@
 ---
 categories:
+  - js
   - javascript
   - testing
 keywords: js, testing, jest, mocking  
