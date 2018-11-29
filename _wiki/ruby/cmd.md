@@ -1,5 +1,5 @@
 ---
-
+category: ruby
 keywords: ruby, cmd
 ---
 ## Using as command line tool
