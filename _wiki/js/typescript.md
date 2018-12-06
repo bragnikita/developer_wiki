@@ -118,3 +118,54 @@ function createInstance<A extends Animal>(c: new () => A): A { //constructor sig
     return new c();
 }
 ```
+
+# Export/Import
+### Resolution
+[Ref](https://www.typescriptlang.org/docs/handbook/module-resolution.html)  
+compiler flag `--moduleResolution Classic | Node`
+* .ts/.tsx and .d.ts files
+* relative import starts with /,./,../ (can not use for an ambient module declaration)
+* non-relative (relative to `baseUrl`) => walks up the dir tree (Classic) or Node module resolution strategy is used
+
+Path mapping in `tsconfig.json`:  
+```
+{
+  "compilerOptions": {
+    "baseUrl": ".", // This must be specified if "paths" is.
+    "paths": {
+      "jquery": ["node_modules/jquery/dist/jquery"] // This mapping is relative to "baseUrl",
+      "*": [
+        "*",
+        "generated/*"
+      ] //specifies roots for any other non-relative imports
+    }
+  }
+}
+```
+
+- `rootDirs` does the same, but for relative imports
+- `--traceResolution` for debug
+
+### Importing non-TS libraries
+
+```typescript
+// interface declaration file (node.d.ts)
+declare module "url" {
+  export interface Url {
+    pathname?: string;
+  }
+  export function parse(urlStr: string): Url;
+  // shorthand for quick import (all types will be "any")
+  declare module "hot-new-module";
+}
+// ...declare other modules
+
+// in library importing file we are using reference tag
+
+/// <reference path="node.d.ts" />
+import * as URL from 'url' //actual import
+```
+
+## Advanced
+### Triple-Slash Directrive [(Ref)](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html)
+`/// <reference path="..." />` adds other file to the compilation files set
