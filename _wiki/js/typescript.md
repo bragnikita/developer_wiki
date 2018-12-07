@@ -2,6 +2,9 @@
 title: Typescript
 category: js
 ---
+[Rus reference](http://typescript-lang.ru)  
+
+
 ```
 // Primitive types: number, string, boolean, symbol, null, or undefined
 

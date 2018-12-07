@@ -218,3 +218,13 @@ end
 # делегирование оригинальному методу
 expect(Person).to receive(:find).and_call_original
 ```
+
+## Tests ignoring
+
+* отдельный пример
+  * заменить it на `xit` или `pending`
+  * поставить первой строкой примера `pending "Feature to be implemented..."`
+* контекст
+  * добавить в блокируемый контекст хук `before(:each) { pending "Feature to be implemented..." }`
+  * добавить мету `context '...', pending: 'Is not implemented' do ...`
+  * добавить собственную мету (напр, `:broken`) и в `spec_helper.rb` в блоке конфига RSpec добавить `c.filter_run_excluding :broken => true`
