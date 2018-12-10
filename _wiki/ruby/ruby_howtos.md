@@ -21,3 +21,9 @@ URI.encode_www_form("q" => ["ruby", "perl"], "lang" => "en") #=> "q=ruby&q=perl&
 # find first URL in string
 html_string.slice(URI.regexp)
 ```
+#### Working with dates
+[Duration](https://api.rubyonrails.org/v5.2.1.1/classes/ActiveSupport/Duration.html)  
+```ruby
+1.month.ago/after(start_date ::= Time.now)
+```
+[Date](https://api.rubyonrails.org/v5.2.1.1/classes/Date.html)  
