@@ -27,3 +27,6 @@ html_string.slice(URI.regexp)
 1.month.ago/after(start_date ::= Time.now)
 ```
 [Date](https://api.rubyonrails.org/v5.2.1.1/classes/Date.html)  
+
+#### Multiline strings
+<https://commandercoriander.net/blog/2014/11/09/a-multiline-string-cheatsheet-for-ruby/>

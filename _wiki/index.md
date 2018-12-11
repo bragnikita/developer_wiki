@@ -13,6 +13,7 @@ categories-display:
   - react
   - python
   - web
+  - golang
 ---
 
 ## Categories
