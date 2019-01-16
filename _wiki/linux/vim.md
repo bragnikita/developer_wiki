@@ -43,6 +43,9 @@ category: linux
 | c$ | заменить до конца строки |
 
 # File Explorer (NerdTree)
+
+* bind Ctrl+n to open: `map <C-n> :NERDTreeToggle<CR>`
+
 # Многооконность
 
 ## Окна

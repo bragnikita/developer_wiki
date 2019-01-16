@@ -24,7 +24,7 @@ categories-display:
   {% for page in site.wiki %}
       {% for pc in page.categories %}
         {% if pc == cat %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a>
+          <li><a class="preview_link" href="{{ page.url }}">{{ page.title }}</a>
           <span class="keywords">
             {{ page.keywords | split: ", " | join: " | " }}
           </span>

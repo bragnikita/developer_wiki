@@ -25,6 +25,9 @@ usermod -g <group> <user>
 #add user to secondary group
 adduser <user> <group>
 usermod -a -G <group> <user>
+gpassd -a <user> <group>
+# remove user from secondary group
+gpasswd -d <user> <group>
 
 #display user group
 id <user>

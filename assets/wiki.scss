@@ -35,3 +35,14 @@
   border-color: red;
   background-color: #ff8680;
 }
+#previewModal {
+  iframe {
+    width: 100%;
+    height: calc(100vh - 200px);
+  }
+}
+@media(min-width: 900px) {
+  #previewModal .modal-dialog {
+    width: 850px;
+  }
+}
