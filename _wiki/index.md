@@ -14,6 +14,7 @@ categories-display:
   - python
   - web
   - golang
+  - git
 ---
 
 ## Categories
