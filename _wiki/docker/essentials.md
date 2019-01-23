@@ -50,6 +50,14 @@ If you omit the executable in a `CMD` instruction, then you must specify an `ENT
 CMD ["executable","param1","param2"]
 CMD ["param1","param2"]
 ```
+To run new container, ignore its entrypoint and attach to it's shell:  
+```
+docker run -it --entrypoint=/bin/bash <image name> -i
+```
+#### Differences between run, start and exec
+`run` **creates new** container, using specified image: `docker run [--name <container name>] <image> [<command> <args>]`  
+`exec` **connects** to the **currently running** container and runs a command in it: `docker exec <container id or name> <command> <args>`  
+`start/restart` **starts** one or more **stopped** containers: `docker start <containers names>`
 
 #Docker Compose
 ## Basic defenitions
